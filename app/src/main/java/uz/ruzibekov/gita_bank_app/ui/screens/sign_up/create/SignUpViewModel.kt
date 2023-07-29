@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import uz.ruzibekov.gita_bank_app.data.model.request.SignUpRequest
 import uz.ruzibekov.gita_bank_app.data.model.response.SignUpResponse
-import uz.ruzibekov.gita_bank_app.domain.AuthRepository
+import uz.ruzibekov.gita_bank_app.domain.auth.AuthRepository
 import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create.state.SignUpState
 import javax.inject.Inject
 

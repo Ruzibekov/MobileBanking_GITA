@@ -4,8 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import uz.ruzibekov.gita_bank_app.domain.AuthRepository
-import uz.ruzibekov.gita_bank_app.domain.imp.AuthRepositoryImpl
+import uz.ruzibekov.gita_bank_app.domain.auth.AuthRepository
+import uz.ruzibekov.gita_bank_app.domain.auth.imp.AuthRepositoryImpl
 
 @Module
 @InstallIn(SingletonComponent::class)

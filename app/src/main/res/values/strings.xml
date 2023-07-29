@@ -15,4 +15,7 @@
 <!--    Genders-->
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
+
+<!--    Sign In-->
+    <string name="title_sign_in">Sign In</string>
 </resources>

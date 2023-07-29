@@ -1,5 +1,6 @@
 package uz.ruzibekov.gita_bank_app.ui.screens.sign_up.verify
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -9,7 +10,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import uz.ruzibekov.gita_bank_app.data.model.request.SignUpVerifyRequest
-import uz.ruzibekov.gita_bank_app.domain.AuthRepository
+import uz.ruzibekov.gita_bank_app.domain.auth.AuthRepository
 import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.verify.state.SignUpVerifyState
 import javax.inject.Inject
 
@@ -31,7 +32,7 @@ class SignUpVerifyViewModel @Inject constructor(
                 result.run {
 
                     onSuccess {
-
+                        Log.i("RRR", it.accessToken)
                     }
 
                     onFailure {
