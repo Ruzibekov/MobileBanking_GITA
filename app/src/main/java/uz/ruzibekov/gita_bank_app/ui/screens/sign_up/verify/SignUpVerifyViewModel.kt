@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import uz.ruzibekov.gita_bank_app.data.remote.AuthService
+import uz.ruzibekov.gita_bank_app.data.source.AuthService
 import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.verify.state.SignUpVerifyState
 import javax.inject.Inject
 

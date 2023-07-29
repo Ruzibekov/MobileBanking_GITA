@@ -5,7 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import retrofit2.Retrofit
-import uz.ruzibekov.gita_bank_app.data.remote.AuthService
+import uz.ruzibekov.gita_bank_app.data.source.AuthService
 
 @Module
 @InstallIn(ViewModelComponent::class)

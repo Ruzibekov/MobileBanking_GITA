@@ -13,7 +13,7 @@ object RetrofitModule {
 
     private val baseUrl = "http://143.198.48.222:84/v1/mobile-bank/"
 
-    @Provides()
+    @Provides
     fun provideRetrofit(): Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)

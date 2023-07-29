@@ -1,4 +1,4 @@
-package uz.ruzibekov.gita_bank_app.data.remote
+package uz.ruzibekov.gita_bank_app.data.source
 
 import retrofit2.Call
 import retrofit2.Response
@@ -10,7 +10,7 @@ import uz.ruzibekov.gita_bank_app.data.model.response.SignUpResponse
 interface AuthService {
 
     @POST("auth/sign-up")
-    fun signUp(@Body request: SignUpRequest): Call<SignUpResponse>
+    fun signUp(@Body request: SignUpRequest): Response<SignUpResponse>
 
     @POST("auth/sign-up/verify")
     fun signUpVerify(@Body token: String, code: String): Response<String>
