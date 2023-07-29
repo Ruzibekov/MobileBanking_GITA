@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GITA_Bank_App</string>
+
+<!--    Sign Up-->
+    <string name="title_sign_up">Sign up</string>
+    <string name="title_first_name">First name</string>
+    <string name="title_last_name">Last name</string>
+    <string name="title_date_of_birth">Date of birth</string>
+    <string name="placeholder_date_of_birth">12/25/2022</string>
+    <string name="title_phone_number">Phone number</string>
+    <string name="placeholder_phone_number">+998 90 000 00 00</string>
+    <string name="title_password">Password</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_gender">Gender</string>
+<!--    Genders-->
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+</resources>
