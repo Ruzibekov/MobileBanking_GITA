@@ -3,12 +3,12 @@ package uz.ruzibekov.gita_bank_app.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import uz.ruzibekov.gita_bank_app.data.source.AuthService
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 object AuthServiceModule {
 
     @Provides

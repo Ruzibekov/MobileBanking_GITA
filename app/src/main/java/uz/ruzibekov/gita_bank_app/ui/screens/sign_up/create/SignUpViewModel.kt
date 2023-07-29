@@ -1,8 +1,10 @@
 package uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import uz.ruzibekov.gita_bank_app.data.model.request.SignUpRequest
@@ -29,17 +31,21 @@ class SignUpViewModel @Inject constructor(
                 // start loading
             }
             .onEach { result ->
-                result.onSuccess { signUpSuccessfulStateFlow.value = it }
-                result.onFailure { messageStateFlow.value = it.message.toString() }
-            }
+                result.onSuccess {
+                    signUpSuccessfulStateFlow.value = it
+                }
+                result.onFailure {
+                    messageStateFlow.value = it.message.toString()
+                }
+            }.launchIn(viewModelScope)
     }
 
     private fun getSignUpRequest() = SignUpRequest(
-        firstName = state.firstNameState.value,
-        lastName = state.lastNameState.value,
+        firstName = "Shavkatbek"/*state.firstNameState.value*/,
+        lastName = "Ruzibekov"/*state.lastNameState.value*/,
         bornDate = "969822000000", // todo for test
-        phone = state.phoneNumberState.value,
-        password = state.passwordState.value,
+        phone = "+998901144147"/*state.phoneNumberState.value*/,
+        password = "12345678"/*state.passwordState.value*/,
         gender = if (state.isMaleState.value) 0 else 1
     )
 }
