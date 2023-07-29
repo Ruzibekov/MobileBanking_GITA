@@ -4,5 +4,6 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 
 data class SignUpVerifyState(
-    val codeState: MutableState<String> = mutableStateOf("")
+    val codeState: MutableState<String> = mutableStateOf(""),
+    var token: String = ""
 )

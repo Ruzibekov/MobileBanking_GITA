@@ -45,14 +45,6 @@ class SignUpViewModel @Inject constructor(
         }
     }
 
-    fun signUpVerify() {
-        messageStateFlow.value = "sign up verify"
-
-        viewModelScope.launch(Dispatchers.IO) {
-
-        }
-    }
-
     private fun getSignUpRequest() = SignUpRequest(
         firstName = state.firstNameState.value,
         lastName = state.lastNameState.value,

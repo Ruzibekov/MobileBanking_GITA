@@ -15,7 +15,6 @@ interface AuthService {
     @POST("auth/sign-up/verify")
     fun signUpVerify(@Body token: String, code: String): Response<String>
 
-    @POST()
-    fun signIn()
+
 
 }

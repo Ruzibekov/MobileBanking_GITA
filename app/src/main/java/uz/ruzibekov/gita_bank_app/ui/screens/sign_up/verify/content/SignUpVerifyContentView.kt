@@ -34,8 +34,8 @@ object SignUpVerifyContentView {
                 Spacer(modifier = Modifier.height(40.dp))
 
                 TextField(
-                    value = "",
-                    onValueChange = {},
+                    value = state.codeState.value,
+                    onValueChange = { state.codeState.value = it },
                     modifier = Modifier.fillMaxWidth()
                 )
 
