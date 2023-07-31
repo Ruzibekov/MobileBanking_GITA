@@ -16,4 +16,6 @@ object AppColor {
     val Light = Color(0xFFF4F4F4)
     val Black = Color(0xFF000000)
     val Black_30 = Color(0x4D000000)
+    val Background = Color(0xFF102060)
+    val White = Color(0xFFFFFFFF)
 }

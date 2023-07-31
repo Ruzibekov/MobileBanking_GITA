@@ -17,7 +17,16 @@
         android:theme="@style/Theme.GITA_Bank_App"
         tools:targetApi="31">
 
-<!--        SignUp-->
+        <activity
+            android:name=".ui.screens.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GITA_Bank_App">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".ui.screens.sign_up.create.SignUpActivity"
             android:exported="true"
@@ -32,15 +41,11 @@
 
         </activity>
 
-        <!--        SignIn-->
         <activity
             android:name=".ui.screens.sign_in.login.SignInActivity"
             android:exported="true"
             android:theme="@style/Theme.GITA_Bank_App">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity

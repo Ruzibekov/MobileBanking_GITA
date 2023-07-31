@@ -1,9 +1,12 @@
 package uz.ruzibekov.gita_bank_app.domain.auth.imp
 
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import uz.ruzibekov.gita_bank_app.data.model.request.SignInRequest
+import uz.ruzibekov.gita_bank_app.data.model.request.SignInVerifyRequest
 import uz.ruzibekov.gita_bank_app.data.model.request.SignUpRequest
 import uz.ruzibekov.gita_bank_app.data.model.request.SignUpVerifyRequest
+import uz.ruzibekov.gita_bank_app.data.model.response.SignInVerifyResponse
 import uz.ruzibekov.gita_bank_app.data.source.AuthService
 import uz.ruzibekov.gita_bank_app.domain.auth.AuthRepository
 import javax.inject.Inject
@@ -37,6 +40,10 @@ class AuthRepositoryImpl @Inject constructor(
             emit(Result.success(response.body()!!))
         else
             emit(Result.failure(Exception("Failure")))
+    }
+
+    override fun signInVerify(request: SignInVerifyRequest): Flow<Result<SignInVerifyResponse>> = flow{
+//        TODO("Not yet implemented")
     }
 
 }
