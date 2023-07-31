@@ -15,13 +15,18 @@ import uz.ruzibekov.gita_bank_app.ui.theme.AppColor
 object PrimaryButton {
 
     @Composable
-    fun Default(textRes: Int, onClick: () -> Unit) {
+    fun Default(
+        textRes: Int,
+        isActive: Boolean = true,
+        onClick: () -> Unit,
+    ) {
 
         Button(
             onClick = onClick,
+            modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(8.dp),
             colors = ButtonDefaults.buttonColors(containerColor = AppColor.Blue),
-            modifier = Modifier.fillMaxWidth()
+            enabled = isActive
         ) {
 
             Text(

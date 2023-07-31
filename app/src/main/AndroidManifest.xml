@@ -21,6 +21,13 @@
             android:name=".ui.screens.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.GITA_Bank_App">
+
+        </activity>
+
+        <activity
+            android:name=".ui.screens.privacy.PrivacyPolicyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GITA_Bank_App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

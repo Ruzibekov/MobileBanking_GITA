@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">GITA_Bank_App</string>
-    
-<!--    Splash-->
+
+    <!--    Splash-->
     <string name="gita_bank">GITA BANK</string>
-<!--    Sign Up-->
+
+    <!--    PrivacyPolicy-->
+    <string name="title_privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_text">Company Name Operates Website The name of the website that provides the SERVICE.\nThis page is used to inform website visitors of our policies on the collection, use and disclosure of Personal Information if anyone chooses to use our Service, website Website Name.\nIf you choose to use our Service, you consent to the collection and use of information in connection with this policy. The personal information we collect is used to provide and improve the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</string>
+    <string name="i_agree_to_all_terms">Я согласен со всеми условиями.</string>
+    <string name="btn_further">Дальше</string>
+
+    <!--    Sign Up-->
     <string name="title_sign_up">Sign up</string>
     <string name="title_first_name">First name</string>
     <string name="title_last_name">Last name</string>
@@ -14,10 +21,11 @@
     <string name="title_password">Password</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_gender">Gender</string>
-<!--    Genders-->
+
+    <!--    Genders-->
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
 
-<!--    Sign In-->
+    <!--    Sign In-->
     <string name="title_sign_in">Sign In</string>
 </resources>

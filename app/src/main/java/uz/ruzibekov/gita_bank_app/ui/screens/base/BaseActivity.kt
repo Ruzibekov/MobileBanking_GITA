@@ -10,6 +10,8 @@ abstract class BaseActivity : ComponentActivity() {
 
     abstract val content: @Composable () -> Unit
 
+    abstract fun initialize()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -18,5 +20,7 @@ abstract class BaseActivity : ComponentActivity() {
                 content.invoke()
             }
         }
+
+        initialize()
     }
 }
