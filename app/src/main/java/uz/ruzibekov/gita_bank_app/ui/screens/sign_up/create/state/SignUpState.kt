@@ -9,5 +9,6 @@ data class SignUpState (
     val dateOfBirthState: MutableState<String> = mutableStateOf(""),
     val phoneNumberState: MutableState<String> = mutableStateOf(""),
     val passwordState: MutableState<String> = mutableStateOf(""),
+    val showPassword: MutableState<Boolean> = mutableStateOf(false),
     val isMaleState: MutableState<Boolean> = mutableStateOf(true)
 )

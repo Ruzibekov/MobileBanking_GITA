@@ -28,17 +28,17 @@
             android:name=".ui.screens.privacy.PrivacyPolicyActivity"
             android:exported="true"
             android:theme="@style/Theme.GITA_Bank_App">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
             android:name=".ui.screens.sign_up.create.SignUpActivity"
             android:exported="true"
             android:theme="@style/Theme.GITA_Bank_App">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity

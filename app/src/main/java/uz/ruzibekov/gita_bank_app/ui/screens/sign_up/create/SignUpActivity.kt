@@ -1,35 +1,28 @@
 package uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create
 
 import android.content.Intent
-import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.runtime.Composable
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import uz.ruzibekov.gita_bank_app.data.model.response.SignUpResponse
-import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create.content.SignUpScreen
+import uz.ruzibekov.gita_bank_app.ui.screens.base.BaseActivity
+import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create._content.SignUpContentView
 import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.create.listeners.SignUpListeners
 import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.verify.SignUpVerifyActivity
-import uz.ruzibekov.gita_bank_app.ui.screens.sign_up.verify.state.SignUpVerifyState
-import uz.ruzibekov.gita_bank_app.ui.theme.GITA_Bank_AppTheme
 
 @AndroidEntryPoint
-class SignUpActivity : ComponentActivity(), SignUpListeners {
+class SignUpActivity : BaseActivity(), SignUpListeners {
 
     private val viewModel: SignUpViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override val content: @Composable () -> Unit = {
+        SignUpContentView.Default(state = viewModel.state, listeners = this)
+    }
 
-        setContent {
-            GITA_Bank_AppTheme {
-                SignUpScreen.Default(state = viewModel.state, listeners = this)
-            }
-        }
-
+    override fun initialize() {
         initObservers()
     }
 

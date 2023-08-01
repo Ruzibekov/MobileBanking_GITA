@@ -31,6 +31,7 @@ object PrivacyPolicyContentView {
 
     @Composable
     fun Default(state: PrivacyPolicyState, listeners: PrivacyPolicyListeners) {
+
         Column(
             modifier = Modifier
                 .fillMaxSize()

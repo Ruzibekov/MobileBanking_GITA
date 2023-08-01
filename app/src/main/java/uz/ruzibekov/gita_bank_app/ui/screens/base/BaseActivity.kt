@@ -16,9 +16,7 @@ abstract class BaseActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            GITA_Bank_AppTheme {
-                content.invoke()
-            }
+            GITA_Bank_AppTheme { content.invoke() }
         }
 
         initialize()
